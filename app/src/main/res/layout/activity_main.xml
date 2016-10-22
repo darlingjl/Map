@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    tools:context="com.example.unique.mymap.MainActivity">
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true" />
+
+    <LinearLayout android:layout_height="35dp"
+        android:layout_width="fill_parent"
+        android:id="@+id/header"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/radar_header"/>
+
+
+    <FrameLayout android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:id="@+id/vgp_center"
+        android:layout_below="@id/header">
+
+
+        <RelativeLayout android:layout_height="360dp"
+            android:layout_width="fill_parent"
+            android:paddingTop="10dp">
+
+            <ImageView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="60dp"
+                android:id="@+id/imageview_sweep"
+                android:src="@drawable/radar_sweep"
+                android:layout_marginLeft="35dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:background="@drawable/centre_radar"
+            android:paddingTop="10dp">
+
+            <Button android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/btn_locate"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/button_locate"
+                android:layout_alignParentLeft="true"/>
+
+            <Button android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/btn_refresh"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/button_refresh_on"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <RelativeLayout android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:id="@+id/empty_filler"
+        android:background="@drawable/list_footer"
+        android:layout_below="@id/vgp_center"/>
+
+
+    <RelativeLayout android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:id="@+id/vgp_footer"
+        android:background="@drawable/list_footer"
+        android:layout_alignParentBottom="true">
+
+        <Button android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/btn_friends"
+            android:background="@drawable/button_friends"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+
+        <Button android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/btn_enemies"
+            android:background="@drawable/button_enemies"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
